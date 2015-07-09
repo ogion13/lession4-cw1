@@ -12,10 +12,30 @@
 
 
 	<script type="text/javascript">
-		// window.onload = function(){
-		// 	var value = prompt("Введите значение переменной value", 0);
-		// 	alert("Значение переменной value = " + value);
-		// }
+		window.onload = function(){
+			var array = [];
+			function getValues(){
+				var value = prompt("Введите значение переменной value", 0);
+					value = parseInt(value);
+				if(isNaN(value)||!value||value===null){
+					var sum = 0;
+					for(var i=0 , length = array.length;i<length; i++){
+						sum +=array[i];
+						
+					}
+					alert("Значение переменной value = " + sum);
+				}
+				else{
+					array.push(value);
+					getValues()	
+				}
+				
+
+			}
+			getValues();
+			
+
+		}
 	</script>
 </head>
 <body>
