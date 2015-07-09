@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>L4 CW1 T9 :: IntersogLABS</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/material.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src="js/material.js"></script>
+
+
+	<script type="text/javascript">
+		function addClass(obj, cls) {
+
+		};
+
+		function removeClass(obj, cls) {
+			
+		};
+		
+
+		window.onload = function(){
+			var obj = {
+				className: 'sidebar menu menu'
+			};
+			addClass(obj, "active");
+			removeClass(obj, "menu");
+			console.log(obj.className); //= "sidebar active"
+		}
+	</script>
+</head>
+<body>
+	<div class="homework-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
+		<header class="homework-header mdl-layout__header mdl-layout__header--scroll mdl-color--grey-100 mdl-color-text--grey-800">
+			<div class="mdl-layout__header-row">
+				<span class="mdl-layout-title">Lession 4 - Classwork 1 - Продвинутая работа над массивами и объектами</span>
+			</div>
+		</header>
+
+		<div class="homework-ribbon"></div>
+		<main class="homework-main mdl-layout__content">
+			<div class="homework-container mdl-grid">
+				<div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+				<div class="homework-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+					<h3>Добавление и удаление «классов»</h3>
+	
+					<p>В объекте есть свойство <code>className</code>, которое содержит список «классов» – слов, разделенных <strong>пробелом</strong></p>
+					<p>Создайте функцию <code>addClass(obj, cls)</code>, которая добавляет в список класс <code>cls</code>, но только если его там еще нет</p>
+					<p>Создайте функцию <code>removeClass(obj, cls)</code>, которая удаляет из списка класс <code>cls</code>, если он там есть</p>
+					<p>P.S. Ваши функции не должны добавлять/удалять/оставлять лишних пробелов.</p>
+					<p>P.P.S. Функция <code>removeClass</code> должна удалять также и дубликаты.</p>
+
+					<p>Место для решения - инлайновый тег <code>&lt;script&gt;</code> на этой странице</p>
+				</div>
+			</div>
+		</main>
+	</div>
+</body>
+</html>
