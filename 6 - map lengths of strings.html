@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>L4 CW1 T6 :: IntersogLABS</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/material.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src="js/material.js"></script>
+
+
+	<script type="text/javascript">
+		window.onload = function(){
+			// Код ниже получает из массива строк новый массив, содержащий их длины:
+			var arr = ["Есть", "жизнь", "на", "Марсе"];
+
+			var arrLength = [];
+			for (var i = 0; i < arr.length; i++) {
+				arrLength[i] = arr[i].length;
+			}
+
+			console.log( arrLength ); // [4,5,2,5]
+		}
+	</script>
+</head>
+<body>
+	<div class="homework-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
+		<header class="homework-header mdl-layout__header mdl-layout__header--scroll mdl-color--grey-100 mdl-color-text--grey-800">
+			<div class="mdl-layout__header-row">
+				<span class="mdl-layout-title">Lession 4 - Classwork 1 - Продвинутая работа над массивами и объектами</span>
+			</div>
+		</header>
+
+		<div class="homework-ribbon"></div>
+		<main class="homework-main mdl-layout__content">
+			<div class="homework-container mdl-grid">
+				<div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+				<div class="homework-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+					<h3>Функциональная работа с массивами</h3>
+	
+					<p>В этом файле вы найдете скрипт в императивном стиле. Перепишите его в функциональном стиле с использованием метода <code>map</code></p>
+					<p>После этого верниесь в <a href="1%20-%20min%20max.html">задачу №1</a> и перепишите методы <code>min, max</code> в функциональном стиле с использованием метода <code>reduce</code></p>
+					<p>Затем сходите в <a href="3%20-%20filter%20range.html">задачу №3</a> и вместо своего метода <code>filterRange</code> воспользуйтесь <code>filter</code></p>
+
+					<p>Место для решения - инлайновый тег <code>&lt;script&gt;</code> на этой странице</p>
+				</div>
+			</div>
+		</main>
+	</div>
+</body>
+</html>
