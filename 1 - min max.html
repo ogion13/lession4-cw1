@@ -13,11 +13,39 @@
 
 	<script type="text/javascript">
 		function min(array){
-
+			if(!Array.isArray(array)){
+				console.log("должен быть массив");
+			}
+			var number;
+			for(var i =0, length = array.length; i<array.length; i++){
+				if(!number){
+					number = array[i];
+				}
+				else{
+					if(number>array[i]){
+						number = array[i];
+					}
+				}
+			}
+			return number;
     	}
 
     	function max(array){
-    		
+    		if(!Array.isArray(array)){
+				console.log("должен быть массив");
+			}
+			var number;
+			for(var i =0, length = array.length; i<array.length; i++){
+				if(!number){
+					number = array[i];
+				}
+				else{
+					if(number<array[i]){
+						number = array[i];
+					}
+				}
+			}
+			return number;
     	}
 
 	    window.onload = function(){
