@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>L4 CW1 T4 :: IntersogLABS</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/material.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src="js/material.js"></script>
+
+
+	<script type="text/javascript">
+		window.onload = function(){
+			// Удачи!
+		}
+	</script>
+</head>
+<body>
+	<div class="homework-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
+		<header class="homework-header mdl-layout__header mdl-layout__header--scroll mdl-color--grey-100 mdl-color-text--grey-800">
+			<div class="mdl-layout__header-row">
+				<span class="mdl-layout-title">Lession 4 - Classwork 1 - Продвинутая работа над массивами и объектами</span>
+			</div>
+		</header>
+
+		<div class="homework-ribbon"></div>
+		<main class="homework-main mdl-layout__content">
+			<div class="homework-container mdl-grid">
+				<div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+				<div class="homework-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+					<h3>Решето Эратосфена</h3>
+	
+					<p>Целое число, большее <code>1</code>, называется простым, если оно не делится нацело ни на какое другое, кроме себя и <code>1</code></p>
+					<p>Древний алгоритм «Решето Эратосфена» для поиска всех простых чисел до <code>n</code> выглядит так:</p>
+					
+					<ul>
+						<li>Создать список последовательных чисел от <code>2</code> до <code>n</code>: <code>2, 3, 4, ..., n</code>.</li>
+						<li>Пусть <code>p=2</code>, это первое простое число.</li>
+						<li>
+							Зачеркнуть все последующие числа в списке с разницей в <code>p</code>, т.е. <code>2*p, 3*p, 4*p</code> и т.д. 
+							В случае <code>p=2</code> это будут <code>4,6,8....</code>
+						</li>
+						<li>Поменять значение <code>p</code> на первое не зачеркнутое число после <code>p</code>.</li>
+						<li>Повторить шаги 3-4 пока <code>p<sup>2</sup> &lt; n</code>.</li>
+						<li>Все оставшиеся не зачеркнутыми числа — простые.</li>
+					</ul>
+
+					<p>Подробнее об алгоритме на <a target="_blank" href="https://ru.wikipedia.org/wiki/Решето_Эратосфена#.D0.90.D0.BB.D0.B3.D0.BE.D1.80.D0.B8.D1.82.D0.BC">Википедии</a></p>
+					<p><strong>Задача:</strong> Найдите все простые числа до <code>100</code> и выведите их сумму.</p>
+
+					<p>Место для решения - инлайновый тег <code>&lt;script&gt;</code> на этой странице</p>
+				</div>
+			</div>
+		</main>
+	</div>
+</body>
+</html>
