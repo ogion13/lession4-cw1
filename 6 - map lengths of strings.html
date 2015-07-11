@@ -17,12 +17,81 @@
 			var arr = ["Есть", "жизнь", "на", "Марсе"];
 
 			var arrLength = [];
+			var newArr;
 			for (var i = 0; i < arr.length; i++) {
 				arrLength[i] = arr[i].length;
 			}
 
 			console.log( arrLength ); // [4,5,2,5]
+			function countStringLength(str){
+				return str.length;
+			}
+			newArr = arr.map(countStringLength);
+			console.log(newArr);
+			
+
+			// functions min max
+
+			var array = [
+	    		843, 661, 281, 324, 222, 529, 606, 507, 74, 578, 994, 916, 664, 251, 766, 292, 358, 480, 474, 85, 181, 379, 660, 171, 284, 
+	    		256, 78, 795, 319, 671, 164, 332, 18, 55, 929, 704, 809, 397, 316, 416, 800, 951, 827, 5, 114, 73, 164, 447, 794, 813
+	    	]
+	    	function min (arr) {
+	    		if(!Array.isArray(arr)){
+	    			console.log("нужен массив");
+	    			return;
+	    		}
+	    		var number = arr.reduce(function(previousValue, currentValue, index, array){
+	    			if(previousValue>currentValue){
+	    				return currentValue;
+	    			}
+	    			else{
+	    				return previousValue;
+	    			}
+	    		}
+	    		)
+	    		return number;
+	    	}
+	    	function max (arr) {
+	    		if(!Array.isArray(arr)){
+	    			console.log("нужен массив");
+	    			return;
+	    		}
+	    		var number = arr.reduce(function(previousValue, currentValue, index, array){
+	    			if(previousValue<currentValue){
+	    				return currentValue;
+	    			}
+	    			else{
+	    				return previousValue;
+	    			}
+	    		}
+	    		)
+	    		return number;
+	    	}
+	    	console.log("minimal: "+  min(array));
+	    	console.log("maximal: ", max(array));
+
+
+	    	// filterRange
+	    	function filterRange(array,from,to){
+	    		if(!Array.isArray(arr)||!from||!to){
+					console.log("проверьте переменные");
+					return;
+				}
+				var newArr = array.filter(function(value){
+					if(value >= from && value <= to){
+						return true;
+					}
+				})
+				return newArr;
+
+	    	}
+
+	    	var filtered = filterRange(array, 200, 300);
+	    	console.log(filtered);
+
 		}
+
 	</script>
 </head>
 <body>

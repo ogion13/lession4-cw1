@@ -13,13 +13,20 @@
 
 	<script type="text/javascript">
 		function isEmpty(obj) {
-
-			return false
+			if(typeof obj != "object"){
+				return "нужен обьект";
+			}
+			for(var a in obj){
+				if(obj.hasOwnProperty(a)){
+					return false;
+				}
+			}
+			return true;
 		}
 
 		window.onload = function(){
-			var obj = {};
-			console.log(isEmpty(obj))
+			var obj = {a:1};
+			console.log(isEmpty(obj));
 		}
 	</script>
 </head>

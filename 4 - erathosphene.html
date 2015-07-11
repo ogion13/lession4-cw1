@@ -14,14 +14,37 @@
 	<script type="text/javascript">
 		window.onload = function(){
 			function eratosphen (element,n) {
-				element = element.parseInt(element);
-				n = n.parseInt(n);
+				element = parseInt(element);
+				n = parseInt(n);
 				if(isNaN(element)||isNaN(n)){
 					return;
 				}
 				var arr = [];
+				for(var i = element;i <= n; i++){
+					arr.push(i);
+				}
+				var l = 0;
+				while(Math.pow(arr[l],2)<n){
+					console.log(arr[l]);
+					for (var i = 0; i < arr.length; i++) {
+						var numb = arr[i]
+						if(numb!=arr[l] && numb%arr[l]===0 ){
+							arr.splice(i,1);
+						}
+					
+
+					};
+					l++;
+				}
+				
+					
+				
+				return arr.join();
 			}
+			
+			console.log(eratosphen(2,100));	
 		}
+
 	</script>
 </head>
 <body>
