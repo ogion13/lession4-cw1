@@ -13,10 +13,43 @@
 
 	<script type="text/javascript">
 		function addClass(obj, cls) {
+			if(!obj instanceof Object||!cls instanceof String){
+				console.log(0)
+				return;
+			}
+			if(!obj.className){
+				obj.className = cls;
+			}
+			else{
+				
+				if(!~obj.className.indexOf(cls)){
+					console.log(1);
+					obj.className += " " + cls;
+				}
+			}
+
 
 		};
 
 		function removeClass(obj, cls) {
+			if(!obj instanceof Object||!cls instanceof String){
+				console.log(0)
+				return;
+			}
+			if(!obj.className){
+				return "no className in obj nothing to remove";
+			}
+			else{
+				var arr = obj.className.split(" ");
+				var arr = arr.filter(function(element){
+					return element!=cls;
+					
+				})
+				console.log (arr);
+				obj.className = arr.join(" ");
+
+			}
+
 			
 		};
 		
